@@ -32,6 +32,7 @@ function paragraphs_id_menu() {
 
   $items['admin/config/system/paragraphs-id'] = array(
     'title' => 'Paragraphs ID',
+    'description' => 'Configure Paragraphs ID class prefix.',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('paragraphs_id_settings_form'),
     'access arguments' => array(PI_ADMIN_PERMISSION),
@@ -45,7 +46,7 @@ function paragraphs_id_menu() {
 /**
  * Implements hook_preprocess().
  *
- * Add class with paragraphs entity id to paragraphs item.
+ * Add class with paragraph item entity id to paragraphs item.
  */
 function paragraphs_id_preprocess(&$variables, $hook) {
   // Only run with paragraphs_item entity.

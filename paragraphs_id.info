@@ -1,5 +1,5 @@
 name = Paragraphs ID
-description = Identification of paragraphs items by their ids, adding of class: paragraphs-item-[entity_id].
+description = Adds a class onto paragraphs item entities.
 core = 7.x
 package = Paragraphs
 dependencies[] = paragraphs

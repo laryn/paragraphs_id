@@ -32,7 +32,7 @@ class ParagraphsIdTestCase extends DrupalWebTestCase {
     $this->createNewTestNode();
     $this->openCreatedNodePage();
 
-    // Check existance of corresponding paragraphs item id class.
+    // Check existence of corresponding paragraphs item id class.
     $id_class = 'paragraphs-item-1';
     $paragraph_class = 'paragraphs-item-pp-test-paragraph-bundle';
 
