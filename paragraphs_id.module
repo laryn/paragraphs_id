@@ -55,11 +55,20 @@ function paragraphs_id_preprocess(&$variables, $hook) {
       // Get paragraph entity.
       $entity = $variables[PI_PARAGRAPH_TYPE];
       // Get the paragraphs item id prefix.
-      $id_prefix = variable_get(PI_PARAGRAPHS_ITEM_ID_PREFIX, PI_PARAGRAPHS_ITEM_ID_PREFIX_DEFAULT);
+      $id_prefix = paragraphs_id_get_prefix();
       // Define class name.
       $class = $id_prefix . $entity->item_id;
       // Add class to classes_array.
       $variables['classes_array'][] = drupal_html_class($class);
     }
   }
+}
+
+/**
+ * Get class prefix from variable.
+ *
+ * @return string
+ */
+function paragraphs_id_get_prefix() {
+  return variable_get(PI_PARAGRAPHS_ITEM_ID_PREFIX, PI_PARAGRAPHS_ITEM_ID_PREFIX_DEFAULT);
 }
